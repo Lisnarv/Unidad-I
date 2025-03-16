@@ -1,9 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const EstudianteController = require('../controllers/EstudianteController');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+/* GET home page (/) */
+router.get('/', (req, res) => {
+  res.render('index', { title: 'Inicio', message: 'Bienvenido al sistema de estudiantes' });
+});
+
+/* GET /vista-estudiantes */
+router.get('/vista-estudiantes', (req, res) => {
+  const lista = EstudianteController.estudiantes;
+  res.render('estudiantes', { estudiantes: lista });
 });
 
 module.exports = router;
