@@ -1,8 +1,38 @@
+/* Estilo general de la página */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  background-color: rgb(132, 164, 194); 
+  color: #333;         
 }
 
+/* Encabezados */
+h1 {
+  color: #070707;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Listado de estudiantes */
+ul {
+  list-style-type: none; 
+  padding: 0;
+}
+
+li {
+  background-color: #fff;      
+  margin: 10px 0;            
+  padding: 10px;              
+  border: 1px solid #ccc;     
+  border-radius: 5px;         
+}
+
+/* Enlaces */
 a {
-  color: #00B7FF;
+  color: #4400ff; 
+  text-decoration: none;
+}
+/*subrayado al posar el mouse*/
+a:hover {
+  text-decoration: underline; 
 }
