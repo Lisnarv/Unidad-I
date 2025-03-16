@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lista de Estudiantes</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Estudiantes Registrados</h1>
+    <% if (estudiantes && estudiantes.length > 0) { %>
+      <ul>
+        <% estudiantes.forEach(est => { %>
+          <li>
+            <strong>ID:</strong> <%= est.id %> |
+            <strong>Nombre:</strong> <%= est.nombre %> |
+            <strong>Edad:</strong> <%= est.edad %> |
+            <strong>Carrera:</strong> <%= est.carrera %>
+          </li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No hay estudiantes registrados.</p>
+    <% } %>
+    <p><a href="/">Volver al inicio</a></p>
+  </body>
+</html>
+
